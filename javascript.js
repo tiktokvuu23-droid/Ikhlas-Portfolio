@@ -1,5 +1,5 @@
 // Typing Animation with Premium feel
-const textArray = ["DEVELOPER ISHAN", "Tournament Architect", "Full-Stack Creator"];
+const textArray = ["DEVELOPER Ikhlas", "Tournament Architect", "Full-Stack Creator"];
 let textIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
@@ -83,12 +83,12 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
     const chatId = "7397424367";
     
     const telegramMessage = `🚀 *New Portfolio Inquiry*\n\n` +
-        `👤 *Name:* ${name}\n` +
-        `📧 *Email:* ${email}\n` +
+        `👤 *Name:* ${Muhammad Ikhlas}\n` +
+        `📧 *Email:* ${mdikhlas098@gmail.com}\n` +
         `💬 *Message:* ${message}\n` +
-        `🔗 From Dev Ishan Portfolio`;
+        `🔗 From Developer Ikhlas Portfolio`;
     
-    const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
+    const url = `https://t.me/officialTechTipsTutorial`;
     const data = {
         chat_id: chatId,
         text: telegramMessage,
