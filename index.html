@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>DEVELOPER ISHAN | Tournament App & Web Developer</title>
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts Premium Touch -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Premium Floating Gradient Background -->
+<div class="orb-bg"></div>
+<div class="grid-overlay"></div>
+
+<header>
+    <div class="logo">
+        <i class="fas fa-terminal"></i>
+        <span>DEVELOPER ISHAN</span>
+    </div>
+    <div class="menu-toggle" onclick="toggleMenu()"></div>
+    <nav id="navMenu">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#skills">Skills</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#payments">Payments</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <div class="hero-content">
+        <div class="hero-badge">✨ Premium Developer</div>
+        <h1>Welcome To My Portfolio<span id="typing"></span><span class="cursor-blink">_</span></h1>
+        <p style="color: #94a3b8; letter-spacing: 1px; max-width: 600px;">Professional Tournament App & Web Developer — Crafting high-performance digital ecosystems for gamers & creators.</p>
+        <a href="#contact" class="btn">Hire Me Now <i class="fas fa-arrow-right"></i></a>
+    </div>
+</section>
+    <h2>My Services</h2>
+    <div class="grid">
+        <div class="card glass-card"><i class="fas fa-gamepad" style="font-size: 2.5rem; color:#38bdf8; margin-bottom:15px;"></i><h3>Tournament App</h3><p>Full-stack apps with real-time brackets</p></div>
+        <div class="card glass-card"><i class="fas fa-code" style="font-size: 2.5rem; color:#38bdf8; margin-bottom:15px;"></i><h3>Tournament Website</h3><p>Responsive, blazing fast & SEO ready</p></div>
+        <div class="card glass-card"><i class="fas fa-cart-plus" style="font-size: 2.5rem; color:#38bdf8; margin-bottom:15px;"></i><h3>Topup Website</h3><p>Automated game top-up portals</p></div>
+        <div class="card glass-card"><i class="fas fa-bezier-curve" style="font-size: 2.5rem; color:#38bdf8; margin-bottom:15px;"></i><h3>UI/UX Design</h3><p>Premium, modern & interactive</p></div>
+    </div>
+</section>
+
+<section class="section container" id="skills">
+    <h2>Tech Arsenal</h2>
+    <div class="grid">
+        <div class="skill-card"><i class="fab fa-html5"></i><h3>HTML5</h3><div class="skill-level"></div></div>
+        <div class="skill-card"><i class="fab fa-css3-alt"></i><h3>CSS3</h3></div>
+        <div class="skill-card"><i class="fab fa-js"></i><h3>JavaScript</h3></div>
+        <div class="skill-card"><i class="fab fa-php"></i><h3>PHP</h3></div>
+        <div class="skill-card"><i class="fas fa-database"></i><h3>MySQL</h3></div>
+        <div class="skill-card"><i class="fab fa-laravel"></i><h3>Laravel</h3></div>
+    </div>
+</section>
+
+<section class="section container" id="payments">
+    <h2>Secure Payments</h2>
+    <div class="grid payment-methods">
+        <div class="pay-card" onclick="openPayment('Bkash', '01608028356', 'Personal / Merchant')">
+            <i class="fas fa-mobile-screen-button" style="color: #e2136e; font-size: 40px;"></i>
+            <h3>Bkash</h3>
+        </div>
+        <div class="pay-card" onclick="openPayment('Nagad', '01304831664', 'Personal')">
+            <i class="fas fa-bolt" style="color: #f7941d; font-size: 40px;"></i>
+            <h3>Nagad</h3>
+        </div>
+        <div class="pay-card" onclick="openPayment('Rocket', 'Currently Not Available', 'Upcoming')">
+            <i class="fas fa-building-columns" style="color: #8c3494; font-size: 40px;"></i>
+            <h3>Rocket</h3>
+        </div>
+        <div class="pay-card" onclick="openPayment('Binance', 'USDT (TRC20)', 'Crypto Wallet')">
+            <i class="fab fa-bitcoin" style="color: #f3ba2f; font-size: 40px;"></i>
+            <h3>Binance</h3>
+        </div>
+    </div>
+</section>
+
+<section class="section container" id="contact">
+    <h2>Get In Touch</h2>
+    <form id="contactForm" class="glass-form">
+        <div class="input-group"><i class="fas fa-user"></i><input type="text" id="name" placeholder="Full Name" required></div>
+        <div class="input-group"><i class="fas fa-envelope"></i><input type="email" id="email" placeholder="Email Address" required></div>
+        <div class="input-group"><i class="fas fa-comment"></i><textarea id="message" rows="5" placeholder="Project Details / Message" required></textarea></div>
+        <button type="submit" class="btn submit-btn">Send Message <i class="fab fa-telegram-plane"></i></button>
+    </form>
+</section>
+
+<footer>
+    <div class="footer-content">
+        <p>© 2026 DEVELOPER ISHAN | All Rights Reserved | Tournament Architect</p>
+        <div class="social-links-footer">
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+    </div>
+</footer>
+
+<!-- Payment Modal (Recreated Premium) -->
+<div id="paymentModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div class="modal-icon"><i class="fas fa-credit-card"></i></div>
+        <h3 id="methodName" style="color: #38bdf8; margin-bottom: 10px;">Payment Details</h3>
+        <p style="color: #94a3b8;">Send Money to:</p>
+        <p id="methodNumber" style="font-size: 1.6rem; color: #fff; font-weight: 800; background: #0f172a; display: inline-block; padding: 5px 20px; border-radius: 40px;"></p>
+        <p>Type: <span id="methodType" style="color: #fbbf24;"></span></p>
+        <button class="btn" onclick="closeModal()" style="margin-top: 25px;">Got it</button>
+    </div>
+</div>
+
+<!-- Telegram Float Button (Premium Animation) -->
+<a href="https://t.me/DV_ISHAN" class="telegram-float" target="_blank">
+    <i class="fab fa-telegram-plane"></i>
+    <span>Contact Support</span>
+</a>
+
+<script src="script.js"></script>
+</body>
+</html>
